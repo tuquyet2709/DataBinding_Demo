@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.tuquyet.databinding_minidemo.User"
+            />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dp_2">
+        <ImageView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:imageResource="@{user.mUserAvatar}"
+            android:layout_margin="@dimen/dp_5"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.userName}"
+                android:textSize="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.userAge}"
+                android:textSize="@dimen/dp_15"
+                android:layout_margin="@dimen/dp_5"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
